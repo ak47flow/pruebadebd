@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['nombre'] = $row['nombre'];
 
                 // Redirigir al usuario a la página principal o de dashboard
-                header("Location: ../dashboard.html");
+                header("Location: dashboard.php");
                 exit();
             } else {
                 $error = "Contraseña incorrecta.";
