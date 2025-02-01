@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Cuentas de Streaming</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Firebase SDK usando CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Gestión de Cuentas de Streaming</h1>
+
+    <!-- Formulario para añadir cuenta -->
+    <form id="form-cuenta">
+      <input type="text" id="plataforma" placeholder="Plataforma" required>
+      <input type="text" id="cuenta" placeholder="Cuenta" required>
+      <input type="text" id="tipo" placeholder="Tipo de Cuenta" required>
+      <input type="date" id="fecha_inicio" required>
+      <input type="date" id="fecha_renovacion" required>
+      <input type="number" id="precio_mensual" placeholder="Precio Mensual" required>
+      <button type="submit">Añadir Cuenta</button>
+    </form>
+
+    <!-- Tabla para mostrar las cuentas -->
+    <table id="tabla-cuentas">
+      <thead>
+        <tr>
+          <th>Plataforma</th>
+          <th>Cuenta</th>
+          <th>Tipo</th>
+          <th>Fecha Inicio</th>
+          <th>Fecha Renovación</th>
+          <th>Precio Mensual</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Las filas se llenarán dinámicamente con JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Agregar el archivo de app.js al final del body -->
+  <script src="app.js"></script>
+</body>
+</html>
